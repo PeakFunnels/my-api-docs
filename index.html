@@ -3,43 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Website API Documentation</title>
-
-  <!-- 1) Apiary config must run BEFORE loading their UI scripts -->
-  <script>
-    window.Apiary = window.Apiary || {};
-    window.Apiary.PAGE = "API_DOCUMENTATION";
-    window.Apiary.APPLICATION_DATA = {
-      apiName:         "Website API",
-      apiSubdomain:    "websitebuilder",
-      applicationName: "docs",
-      domain:          "apiary.io",
-      baseAjaxUrl:     "https://websitebuilder.docs.apiary.io/",
-      features: {
-        "3ColumnDocumentation":    true,
-        "clientSideConsole":       true,
-        "browserExtensionConsole": true
-      },
-      jsLoginUrl:    "",
-      mockserverUrl: "",
-      loginUri:      "",
-      baseDomain:    ""
-    };
-  </script>
-
-  <!-- 2) Stylesheet for the embedded docs -->
-  <link rel="stylesheet" href="./docs-198a90b3.css" crossorigin="anonymous">
+  <!-- 1) Load Apiary’s embed script -->
+  <script src="https://static.apiary.io/embed/apiary.js"></script>
+  <style>
+    /* make it fill the viewport */
+    body, html { margin:0; padding:0; height:100%; }
+    #apiary-docs { width:100%; height:100%; border:0; }
+  </style>
 </head>
-<body style="margin:0; padding:0; height:100vh;">
-
-  <header style="padding:1rem; background:#f4f4f4; text-align:center;">
-    <h1>Website API Docs</h1>
-  </header>
-
-  <!-- 3) Mount point for the 3-column API UI -->
-  <div id="apiary-docs-root" style="width:100%; height:calc(100% - 68px);"></div>
-
-  <!-- 4) Load vendor and docs scripts -->
-  <script src="./vendor-e9daaa54.js" crossorigin="anonymous"></script>
-  <script src="./docs-e9daaa54.js" crossorigin="anonymous"></script>
+<body>
+  <!-- 2) This DIV will be replaced by your 3-column docs UI -->
+  <div
+    id="apiary-docs"
+    data-apiary-domain="apiary.io"
+    data-apiary-subdomain="websitebuilder"
+  ></div>
 </body>
 </html>
