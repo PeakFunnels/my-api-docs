@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Website API Documentation</title>
 
-  <!-- 1. Apiary config: tells the widget what to render -->
+  <!-- 1) Apiary config -->
   <script>
     window.Apiary = window.Apiary || {};
     window.Apiary.PAGE = "API_DOCUMENTATION";
@@ -19,7 +19,7 @@
         clientSideConsole:      true,
         browserExtensionConsole:true
       },
-      // unset any you don’t need:
+      // you can leave these empty if you don’t need them:
       jsLoginUrl:    "",
       mockserverUrl: "",
       loginUri:      "",
@@ -27,22 +27,19 @@
     };
   </script>
 
-  <!-- 2. Your custom CSS -->
+  <!-- 2) Stylesheet -->
   <link rel="stylesheet" href="./docs-198a90b3.css" crossorigin="anonymous">
 </head>
 <body style="margin:0; padding:0; height:100vh;">
 
-  <!-- Optional heading -->
   <header style="padding:1rem; background:#f4f4f4; text-align:center;">
     <h1>Website API Docs</h1>
   </header>
 
-  <!-- 3. Container for the API UI -->
-  <div id="apiary-docs-root" style="width:100%; height:calc(100% - 68px);">
-    <!-- the scripts below will populate this -->
-  </div>
+  <!-- 3) This is where the 3-column UI will mount: -->
+  <div id="apiary-docs-root" style="width:100%; height:calc(100% - 68px);"></div>
 
-  <!-- 4. Core JavaScript -->
+  <!-- 4) Core JS: -->
   <script src="./vendor-e9daaa54.js" crossorigin="anonymous"></script>
   <script src="./docs-e9daaa54.js" crossorigin="anonymous"></script>
 </body>
