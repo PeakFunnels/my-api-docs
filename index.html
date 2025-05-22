@@ -2,22 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Website API Docs</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-  </style>
+  <title>Website API Documentation</title>
+
+  <!-- 1. Apiary config: tells the widget what to render -->
+  <script>
+    window.Apiary = window.Apiary || {};
+    window.Apiary.PAGE = "API_DOCUMENTATION";
+    window.Apiary.APPLICATION_DATA = {
+      apiName:        "Website API",
+      apiSubdomain:   "websitebuilder",
+      applicationName:"docs",
+      domain:         "apiary.io",
+      baseAjaxUrl:    "https://websitebuilder.docs.apiary.io/",
+      features: {
+        3ColumnDocumentation:   true,
+        clientSideConsole:      true,
+        browserExtensionConsole:true
+      },
+      // unset any you don’t need:
+      jsLoginUrl:    "",
+      mockserverUrl: "",
+      loginUri:      "",
+      baseDomain:    ""
+    };
+  </script>
+
+  <!-- 2. Your custom CSS -->
+  <link rel="stylesheet" href="./docs-198a90b3.css" crossorigin="anonymous">
 </head>
-<body>
-  <!-- Just iframe the published docs URL -->
-  <iframe src="https://websitebuilder.docs.apiary.io/" title="Website API Documentation"></iframe>
+<body style="margin:0; padding:0; height:100vh;">
+
+  <!-- Optional heading -->
+  <header style="padding:1rem; background:#f4f4f4; text-align:center;">
+    <h1>Website API Docs</h1>
+  </header>
+
+  <!-- 3. Container for the API UI -->
+  <div id="apiary-docs-root" style="width:100%; height:calc(100% - 68px);">
+    <!-- the scripts below will populate this -->
+  </div>
+
+  <!-- 4. Core JavaScript -->
+  <script src="./vendor-e9daaa54.js" crossorigin="anonymous"></script>
+  <script src="./docs-e9daaa54.js" crossorigin="anonymous"></script>
 </body>
 </html>
