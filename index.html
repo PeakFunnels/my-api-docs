@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Website API Documentation</title>
 
-  <!-- 1) Apiary configuration must run BEFORE we load the UI scripts -->
+  <!-- 1) Apiary config must run BEFORE loading their UI scripts -->
   <script>
     window.Apiary = window.Apiary || {};
     window.Apiary.PAGE = "API_DOCUMENTATION";
@@ -15,11 +15,10 @@
       domain:          "apiary.io",
       baseAjaxUrl:     "https://websitebuilder.docs.apiary.io/",
       features: {
-        3ColumnDocumentation:    true,
-        clientSideConsole:       true,
-        browserExtensionConsole: true
+        "3ColumnDocumentation":    true,
+        "clientSideConsole":       true,
+        "browserExtensionConsole": true
       },
-      // leave these empty unless you use them:
       jsLoginUrl:    "",
       mockserverUrl: "",
       loginUri:      "",
@@ -27,7 +26,7 @@
     };
   </script>
 
-  <!-- 2) Stylesheet for the Apiary UI -->
+  <!-- 2) Stylesheet for the embedded docs -->
   <link rel="stylesheet" href="./docs-198a90b3.css" crossorigin="anonymous">
 </head>
 <body style="margin:0; padding:0; height:100vh;">
@@ -36,10 +35,10 @@
     <h1>Website API Docs</h1>
   </header>
 
-  <!-- 3) This DIV is where the 3-column docs will mount -->
+  <!-- 3) Mount point for the 3-column API UI -->
   <div id="apiary-docs-root" style="width:100%; height:calc(100% - 68px);"></div>
 
-  <!-- 4) Core JavaScript: load vendor first, then docs -->
+  <!-- 4) Load vendor and docs scripts -->
   <script src="./vendor-e9daaa54.js" crossorigin="anonymous"></script>
   <script src="./docs-e9daaa54.js" crossorigin="anonymous"></script>
 </body>
